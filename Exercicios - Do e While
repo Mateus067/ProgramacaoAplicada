@@ -1,8 +1,8 @@
-#include <iostream>
+/*#include <iostream>
 #include <locale.h>
 using namespace std;
 main() {
-	int i = 0;
+	int i;
 	do {
 		setlocale(LC_ALL, "Portuguese");
 		float C,K,F;
@@ -11,10 +11,13 @@ main() {
 		K= C+273;
 		F= ((9*C+160)/5);
 		cout << C <<"°C corresponde á " << F <<"°F e " << K << "°K.\n";
-		cout << "------------------------------------------------------\n";
 		i++;
+		cout << "------------------------------------------------------\n";
 	}
-}
+	while (i <= 4);
+	return 0;
+	system("PAUSE");
+}*/
 
 /*#include <iostream>
 #include <locale.h>
@@ -31,6 +34,7 @@ main() {
 		K= C+273;
 		F= ((9*C+160)/5);
 		cout << C <<"°C corresponde á " << F <<"°F e " << K << "°K.\n";
+		i++;
 		cout << "------------------------------------------------------\n";
 		cout << "Você deseja finalizar o software ?. (S/N)\n";
 		cin >> op;
