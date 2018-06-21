@@ -1,0 +1,91 @@
+#include <iostream>
+#include <math.h>
+#include <locale.h>
+using namespace std;
+main() {
+	valor_erro:
+	setlocale(LC_ALL, "Portuguese");
+	int valor_digitado;
+	cout << "Seja bem vindo caro usuário, selecione uma das opções a baixo.\n";
+	cout << "-----------------------------------------------------------\n";
+	cout << "1 - Calcule o volume de uma lata\n";
+	cout << "2 - Calcule  o volume em litros de uma lata\n";
+	cout << "3 - Converter temperatura °C para °F \n";
+	cout << "4 - Converter temperatura °F para °C \n";
+	cout << "5 - Calcule a quantidade de combustível para uma viagem\n";
+	cin >> valor_digitado;
+	if (valor_digitado==1){
+        q1:
+		float raio, altura, volume;
+		cout << "**Você selecionou a opção 'Calcule  o volume de uma lata'\n";
+		cout << "-----------------------------------------------------------\n";
+		cout << "1° Digite o RAIO da lata em mm.\n";	
+		cin >> raio;
+		cout << "2° Digite a ALTURA da lata em mm³.\n";	
+		cin >> altura;
+		volume = raio*raio*altura*M_PI;
+		cout << "**O volume em litros da lata é de:" << volume <<".\n";
+		cout << "\n \n";
+		goto q1;
+	}
+	if (valor_digitado==2){
+        q2:
+        float raio, altura, volume, litros;
+        cout << "**Você selecionou a opção 'Calcule  o volume em litros de uma lata'\n";
+        cout << "-----------------------------------------------------------\n";
+        cout << "1° Digite o RAIO da lata em mm.\n";	
+        cin >> raio;
+        cout << "2° Digite a ALTURA da lata em mm³.\n";	
+        cin >> altura;
+        volume = raio*raio*altura*M_PI;
+        litros = volume*0.000001;
+        cout << "**A Lata possui:" << litros <<"L.\n";
+        cout << "\n \n";
+        goto q2;
+	}
+	if (valor_digitado==3){
+        q3:
+		cout << "**Você selecionou a opção 'Converter temperatura °C para °F'\n";
+		cout << "-----------------------------------------------------------\n";
+		float C, F;
+		cout << "1° Digite a temperatura em CELSIUS.\n";	
+		cin >> C;
+		F = (9*C+160)/5;
+		cout <<"**"<< C <<"°C corresponde a "<< F<<"°F.\n";
+		cout << "\n \n";
+		goto q3;
+	}
+	if (valor_digitado==4){
+        q4:
+		cout << "**Você selecionou a opção 'Converter temperatura °F para °C'\n";
+		cout << "-----------------------------------------------------------\n";
+		float C, F;
+		cout << "1° Digite a temperatura em FAHRENHEIT.\n";	
+		cin >> F;
+		C = ((F-32)*5)/9;
+		cout <<"**"<< F <<"°F corresponde a "<< C<<"°C.\n";
+		cout << "\n \n";
+		goto q4;
+	}
+	if (valor_digitado==5){
+        q5:
+		cout << "**Você selecionou a opção 'Calcule a quantidade de combustível para uma viagem'\n";
+		cout << "-----------------------------------------------------------\n";
+		float kml,t,vel,cons;
+		cout << "1° Digite a relação de Km/L do veículo\n";
+		cin >> kml;
+		cout << "2° Digite o tempo da viagem em horas\n";
+		cin >> t;
+		cout << "3° Digite a velocidade do veículo em Km/H\n";
+		cin >> vel;
+		cons = (t*vel)/kml;
+		cout <<"**O Consumo do seu veículo é de: "<< cons<<"L.\n";
+		cout << "\n \n";
+		goto q5;
+	}
+	if (valor_digitado >=6){
+		goto valor_erro;
+	}
+	system("PAUSE");
+	return 0;
+}
