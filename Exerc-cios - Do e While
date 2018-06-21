@@ -1,0 +1,41 @@
+#include <iostream>
+#include <locale.h>
+using namespace std;
+main() {
+	int i = 0;
+	do {
+		setlocale(LC_ALL, "Portuguese");
+		float C,K,F;
+		cout << "Digite a temperatura em Celsius:\n";
+		cin >> C;
+		K= C+273;
+		F= ((9*C+160)/5);
+		cout << C <<"°C corresponde á " << F <<"°F e " << K << "°K.\n";
+		cout << "------------------------------------------------------\n";
+		i++;
+	}
+}
+
+/*#include <iostream>
+#include <locale.h>
+#include <string.h>
+using namespace std;
+main() {
+	int i;
+	char op;
+	do {
+		setlocale(LC_ALL, "Portuguese");
+		float C,K,F;
+		cout << "Digite a temperatura em Celsius:\n";
+		cin >> C;
+		K= C+273;
+		F= ((9*C+160)/5);
+		cout << C <<"°C corresponde á " << F <<"°F e " << K << "°K.\n";
+		cout << "------------------------------------------------------\n";
+		cout << "Você deseja finalizar o software ?. (S/N)\n";
+		cin >> op;
+	}
+	while (op == 'N'||op == 'n');
+	system("PAUSE");
+}*/
+	
